@@ -1,0 +1,10 @@
+<h1 style="background: #eeeeee" apDarkenOnHover brightness="50">Photos</h1>
+<gpa-search (onTyping)="filter = $event" [value]="filter" ></gpa-search>
+<gpa-photos
+    [photos]="photos | filterByDescription: filter"
+></gpa-photos>
+
+<gpa-load-button 
+    (click)="load()"
+    [hasMore]="hasMore"
+></gpa-load-button>
